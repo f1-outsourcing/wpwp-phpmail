@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== wpwp-phpmail ===
 Contributors: f1outsourcing
 Tags: fix
 Requires at least: 4.7
