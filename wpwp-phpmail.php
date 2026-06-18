@@ -8,7 +8,7 @@ Plugin Name: wpwp-phpmail
 Plugin URI: http://wordpress.org/plugins/wp-phpmail/
 Description: quick fix plugin in order to be able to use the php mail function. It overrides the wp_mail function and redirects to the plain php mail function. 
 Author: None None
-Version: 0.1.0
+Version: 0.2.0
 */
 
 if (!defined('ABSPATH')){
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')){
 
 class PHPMAIL_MAILER {
     
-    var $plugin_version = '0.1.0';
+    var $plugin_version = '0.2.0';
     var $plugin_url;
     var $plugin_path;
     
@@ -28,6 +28,10 @@ class PHPMAIL_MAILER {
         define('PHPMAIL_MAILER_URL', $this->plugin_url());
         define('PHPMAIL_MAILER_PATH', $this->plugin_path());
         $this->loader_operations();
+    }
+
+    function plugins_loaded_handler() {
+        // Nothing needed here.
     }
 
     function loader_operations() {
